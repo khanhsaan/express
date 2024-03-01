@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs")%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center" >
+        <div class="list-group" id="container">
+            <%for(var i = 0; i < result_array.length; i ++){%>
+            <label class="list-group-item d-flex gap-3">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="uncheck" style="font-size: 1.375em;">
+                <span class="pt-1 form-checked-content">
+                    <strong><%= result_array[i].getName()%></strong>
+                    <small class="d-block text-body-secondary">
+                        Duration: <%=result_array[i].getTime()%>
+                    </small>
+                    <!-- <small class="d-block text-body-secondary">
+                        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>
+                        1:00–2:00pm
+                    </small> -->
+                </span>
+            </label>
+            <%}%>
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,14 @@
+.input-group{
+    padding: 10px;
+}
+
+.px-4{
+    padding-right: 20rem!important;
+    padding-left: 20rem!important;
+    padding-top: 2rem;
+}
+
+.title{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
